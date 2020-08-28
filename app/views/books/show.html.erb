@@ -1,7 +1,18 @@
-<h1>Title:</h1>
+<body>
+<% if flash[:notice] %>
+  <p class="notice"><%= flash[:notice] %></p>
+<% end %>
+
+<p class="p_on">
+	<strong>Title:</strong>
 <%= @book.title %>
-<h2>Body</h2>
+</p>
+<p class="p_on">
+	<strong>Body</strong>
 <%= @book.body %>
+</p>
 
 <%= link_to "Edit", edit_book_path(@book) %>
+|
 <%= link_to "Back", books_path %>
+</body>
